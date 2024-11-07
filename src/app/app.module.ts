@@ -19,6 +19,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { ActivityLogsComponent } from './components/activity-logs/activity-logs.component';
 import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -56,9 +57,11 @@ export const routes: Routes = [
   ],
   imports: [
     RouterModule.forRoot(routes),
+    BrowserModule,
     CommonModule
   ],
   exports: [RouterModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
