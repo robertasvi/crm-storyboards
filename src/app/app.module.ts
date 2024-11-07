@@ -17,6 +17,8 @@ import { HeaderSearchComponent } from './components/header-search/header-search.
 import { InboxComponent } from './components/inbox/inbox.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
+import { ActivityLogsComponent } from './components/activity-logs/activity-logs.component';
+import { AppComponent } from './app.component';
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -31,10 +33,8 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    RouterModule.forRoot(routes),
-    CommonModule,
+  declarations: [
+    AppComponent,
     SideNavComponent, 
     HeaderComponent, 
     HomeComponent,
@@ -47,12 +47,16 @@ export const routes: Routes = [
     TeamComponent,
     SettingsComponent,
     ErrorComponent,
-    HeaderComponent,
     HeaderSearchComponent,
     InboxComponent,
     LoginComponent,
     NotificationsComponent,
-    SideNavComponent
+    ProfitComponent,
+    ActivityLogsComponent
+  ],
+  imports: [
+    RouterModule.forRoot(routes),
+    CommonModule
   ],
   exports: [RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
