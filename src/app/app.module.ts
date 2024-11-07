@@ -12,6 +12,11 @@ import { CapitalComponent } from './components/capital/capital.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { TeamComponent } from './components/team/team.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { ErrorComponent } from './components/error/error.component';
+import { HeaderSearchComponent } from './components/header-search/header-search.component';
+import { InboxComponent } from './components/inbox/inbox.component';
+import { LoginComponent } from './components/login/login.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -40,7 +45,14 @@ export const routes: Routes = [
     CapitalComponent,
     ContactsComponent,
     TeamComponent,
-    SettingsComponent
+    SettingsComponent,
+    ErrorComponent,
+    HeaderComponent,
+    HeaderSearchComponent,
+    InboxComponent,
+    LoginComponent,
+    NotificationsComponent,
+    SideNavComponent
   ],
   exports: [RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
