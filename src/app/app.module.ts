@@ -21,23 +21,24 @@ import { ActivityLogsComponent } from './components/activity-logs/activity-logs.
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { ProfileComponent } from './components/profile/profile.component';
+import { Auth } from './auth.service';
 
 export const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: HomeComponent, canActivate: [Auth]},
+  {path: 'home', component: HomeComponent, canActivate: [Auth]},
   {path: 'login', component: LoginComponent},
   {path: 'error/:type', component: ErrorComponent},
-  {path: 'profile', component: ProfileComponent},
-  {path: 'notifications', component: NotificationsComponent},
-  {path: 'inbox', component: InboxComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'sales/:search', component: SalesComponent},
-  {path: 'stocks/:search', component: StocksComponent},
-  {path: 'finance/:type/:search', component: FinanceComponent},
-  {path: 'profit', component: ProfitComponent},
-  {path: 'capital', component: CapitalComponent},
-  {path: 'contacts/:type', component: ContactsComponent},
-  {path: 'team', component: TeamComponent},
-  {path: 'settings', component: SettingsComponent}
+  {path: 'profile', component: ProfileComponent, canActivate: [Auth]},
+  {path: 'notifications', component: NotificationsComponent, canActivate: [Auth]},
+  {path: 'inbox', component: InboxComponent, canActivate: [Auth]},
+  {path: 'sales/:search', component: SalesComponent, canActivate: [Auth]},
+  {path: 'stocks/:search', component: StocksComponent, canActivate: [Auth]},
+  {path: 'finance/:type/:search', component: FinanceComponent, canActivate: [Auth]},
+  {path: 'profit', component: ProfitComponent, canActivate: [Auth]},
+  {path: 'capital', component: CapitalComponent, canActivate: [Auth]},
+  {path: 'contacts/:type', component: ContactsComponent, canActivate: [Auth]},
+  {path: 'team', component: TeamComponent, canActivate: [Auth]},
+  {path: 'settings', component: SettingsComponent, canActivate: [Auth]}
 ];
 
 @NgModule({
