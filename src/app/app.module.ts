@@ -29,7 +29,7 @@ export const routes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'notifications', component: NotificationsComponent},
   {path: 'inbox', component: InboxComponent},
-  {path: 'home/:layout', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'sales/:search', component: SalesComponent},
   {path: 'stocks/:search', component: StocksComponent},
   {path: 'finance/:type/:search', component: FinanceComponent},
