@@ -20,15 +20,22 @@ import { NotificationsComponent } from './components/notifications/notifications
 import { ActivityLogsComponent } from './components/activity-logs/activity-logs.component';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { ProfileComponent } from './components/profile/profile.component';
 
 export const routes: Routes = [
-  {path: 'home', component: HomeComponent},
-  {path: 'sales', component: SalesComponent},
-  {path: 'stocks', component: StocksComponent},
-  {path: 'finance', component: FinanceComponent},
+  {path: '', component: HomeComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'error/:type', component: ErrorComponent},
+  {path: 'profile', component: ProfileComponent},
+  {path: 'notifications', component: NotificationsComponent},
+  {path: 'inbox', component: InboxComponent},
+  {path: 'home/:layout', component: HomeComponent},
+  {path: 'sales/:search', component: SalesComponent},
+  {path: 'stocks/:search', component: StocksComponent},
+  {path: 'finance/:type/:search', component: FinanceComponent},
   {path: 'profit', component: ProfitComponent},
   {path: 'capital', component: CapitalComponent},
-  {path: 'contacts', component: ContactsComponent},
+  {path: 'contacts/:type', component: ContactsComponent},
   {path: 'team', component: TeamComponent},
   {path: 'settings', component: SettingsComponent}
 ];
